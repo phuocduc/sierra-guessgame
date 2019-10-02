@@ -1,4 +1,4 @@
-let random = Math.floor(Math.random()*100+1);
+let random = Math.floor((Math.random()*100)+1);
 console.log(random)
 let history = []
 let count =5;
@@ -53,7 +53,7 @@ function reset()
 function myFunction()
 {
     count--;
-    document.getElementById('Time-down').innerHTML = `You have ${count} time`
+    document.getElementById('Time-down').innerHTML = `<div style="color: rebeccapurple;font-size:15pt">You have ${count} time</div>`
     if(count === 0){
         return playWithAllRound()
     }
@@ -71,15 +71,16 @@ function myFunction()
     clear()
     if(number>random)
     {
-        document.getElementById('notification').innerHTML="Too High"
+        document.getElementById('notification').innerHTML=`<div style="color:red;font-size:35pt;font-weight:2rem;">Too High</div>`
     }
     else if(number <random)
     {
-        document.getElementById('notification').innerHTML="Too Small"
+        document.getElementById('notification').innerHTML=`<div style="color:red;font-size:35pt;font-weight:2rem;">Too Small</div>`
     }
     else
     {
-        document.getElementById('notification').innerHTML="You are win"
+        document.getElementById('notification').innerHTML=`<div style="color:red;font-size:35pt;font-weight:2rem;>You Win</div>`
+        document.body.style.backgroundImage = "url(../image/firework.jpg)"
     }
     // if(history.length>4)
     // {

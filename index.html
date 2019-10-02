@@ -19,9 +19,10 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+
     <div class="container text-center">
         <div class="form-group">
-          <label id="Time-down">Game</label>
+          <label  id="Time-down" class="Time-down">Game</label>
           <small  class="form-text text-muted"
             >Hope you will win</small
           >
@@ -37,11 +38,12 @@
           />
         </div>
         
-        <button id="myButton" onclick="myFunction()" class="btn btn-primary">Play</button>
-        <button class="btn btn-outline-primary" onclick="reset()">New Game</button>
-        <div id="history"></div>
+        <button id="myButton" onclick="myFunction()" class="btn btn-primary bt">Play</button>
+        <div>Be guessed:<span id="history" class="history"></span></div>
         
     <h5>Time request:</h5>  <span id="time"></span>
+    <button class="btn btn-outline-primary" onclick="reset()">New Game</button>
+
     </div>
 
 
