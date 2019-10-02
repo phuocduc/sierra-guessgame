@@ -2,31 +2,34 @@ let random = Math.floor(Math.random()*100+1);
 console.log(random)
 let history = []
 let count =5;
-// let time= 0; //start game
-// let myTime;
+let time= 0; //start game
+let myTime;
 
-// function setTime()
-// {
-//     time+=1
-//     document.getElementById('time').innerHTML = time;
-// }
+function setTime()
+{
+    time+=1
+    document.getElementById('time').innerHTML = time;
+    if(time == 30)
+    {
+        stopTimer();
+        playWithAllRound()  
+        document.getElementById('time').innerHTML = "You lose"
+    }
+}
 
-// function stopTimer()
-// {
-//     clearInterval(myTime)
-// }
+function stopTimer()
+{
+    clearInterval(myTime)
+}
 
-// if(time == 5)
-// {
-//     stopTimer();
-// }
 
-// function timeCounting()
-// {
-//     myTime=setInterval(setTime,1000);//(function to fire, milisecond)
-// }
 
-// timeCounting();
+function timeCounting()
+{
+    myTime=setInterval(setTime,1000);//(function to fire, milisecond)
+}
+
+timeCounting();
 
 
 function clear()
@@ -40,10 +43,12 @@ function playWithAllRound()
     document.getElementById('notification').innerHTML ="you are so bad";
 }
 
-// function reset()
-// {
-//     return document.getElementById('reset_1').reset();
-// }
+function reset()
+{
+    document.location.reload();
+}
+
+
 
 function myFunction()
 {
